@@ -18,19 +18,19 @@ export class AppComponent {
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit(): void {
-    this.connection = new HubConnectionBuilder().withUrl('http://localhost:5000/messagehub').build();
-    this.connection.on('ServerEvent', (message: string) => {
-      this.serverEvents.push(message);
-      this.snackBar.openFromComponent(SnackBarComponent, {
-        data: {
-          message
-        },
-        duration: 1000
-      });
-    });
+    // this.connection = new HubConnectionBuilder().withUrl('http://localhost:5000/messagehub').build();
+    // this.connection.on('ServerEvent', (message: string) => {
+    //   this.serverEvents.push(message);
+    //   this.snackBar.openFromComponent(SnackBarComponent, {
+    //     data: {
+    //       message
+    //     },
+    //     duration: 1000
+    //   });
+    // });
 
-    this.connection.start().catch((err) => {
-      console.error(err);
-    });
+    // this.connection.start().catch((err) => {
+    //   console.error(err);
+    // });
   }
 }
